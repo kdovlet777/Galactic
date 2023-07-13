@@ -1,5 +1,5 @@
 <?php 
-	
+	$somecode;
 	$code="Contacts";
  include('header.php');?>
  
