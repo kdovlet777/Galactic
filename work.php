@@ -4,7 +4,7 @@
 	use MySpace\NewsModel;
 	$news = new NewsModel;
 	$row = $news::getItem($_GET['id']);
-	$somecode;
+	$thirdcode;
 	$code = "News";
 	include("header.php");
 ?>
