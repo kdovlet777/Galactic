@@ -11,6 +11,6 @@
 	<input type="password" name="pass" class="pass">
 	<button class="button">Отправить</button>
 	<div class="output"></div>
-
+	<div class="AHAHA">Some div</div>
 </body>
 </html>
