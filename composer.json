@@ -1,0 +1,6 @@
+{
+    "name": "my/site",
+    "require": {
+        "scssphp/scssphp": "^1.11"
+    }
+}
