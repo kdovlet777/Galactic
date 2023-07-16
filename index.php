@@ -16,8 +16,8 @@
 	}
 	
 	$st = $news::getList($start, $amount);
-	
 	$bt = $news::getLast();
+	
 	include("header.php");
 		?>
 		<div class="banner">

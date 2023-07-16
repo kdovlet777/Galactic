@@ -13,7 +13,7 @@
 			return $row['count(*)'];
 		}
 		public static function getList($start, $limit){
-			$sql = 'select *,DATE_FORMAT(date, "%d.%m.%y") dt from news order by date desc limit :start , :limit ;';
+			$sql = 'select *,DATE_FORMAT(date, "%d.%m.%Y") dt from news order by date desc limit :start , :limit ;';
 			$st = DB::connection()->prepare($sql);
 			$st->bindValue(":start", $start, PDO::PARAM_INT);
 			$st->bindValue(":limit", $limit, PDO::PARAM_INT);
@@ -21,7 +21,7 @@
 			return $st;
 		}
 		public static function getItem($id){
-			$sql = 'select *,DATE_FORMAT(date, "%d.%m.%y") dt from news where id= :id ;';
+			$sql = 'select *,DATE_FORMAT(date, "%d.%m.%Y") dt from news where id= :id ;';
 			$st = DB::connection()->prepare($sql);
 			$st->bindValue(":id", $id, PDO::PARAM_INT);
 			$st->execute();
