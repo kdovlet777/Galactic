@@ -9,7 +9,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" type="text/css" href="style.php">
+<script src="builds/assets_css_tyles_scss.index.js"></script>
+<link rel="stylesheet" href="builds/assets_css_tyles_scss.index.css">
+
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -20,7 +22,7 @@
 </head>
 <body>
 	<div class="container">
-<nav class="navbar">
+	<nav class="navbar">
 		<div class="logo">
 			<img src="assets/img/Vector.png">
 			<p class="navbar-text">ГАЛАКТИЧЕСКИЙ<br>ВЕСТНИК</p>
@@ -49,4 +51,4 @@
 					<?php }
 				} ?>
 		</div>
-</nav>
+	</nav>

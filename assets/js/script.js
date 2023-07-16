@@ -25,12 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			    el: '.swiper-scrollbar',
 			  },
 			});
-	const prom = new Promise(function(resolve, reject) {
-			setTimeout(function() {
-				swiper.slideNext();
-			}, 2000);
-	});
-
 	const btn = document.querySelector(".sendbutton");
 	const msg = document.querySelector(".message");
 	const name = document.querySelector("#name");

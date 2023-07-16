@@ -67,13 +67,12 @@ $primary-color: #841844;
 	font-size: 20px;
 	font-family: $font-stack;
 }
-/*
 .banner {
 	margin-top: 40px;
-	height: 600px;
+	height: 60vh;
 	width: 100%;
 	margin-left: 0px;
-	position: absolute;
+	position: relative;
 }
 
 .ban-image {
@@ -82,11 +81,14 @@ $primary-color: #841844;
 	object-fit: cover;
 	z-index: -1;
 	position: absolute;
-	display: block;
+	filter: brightness(70%);
 }
-*/
+
 .ban-text {
 	margin-left: 10vw;
+	height: auto;
+	margin-top: 20vh;
+	position: absolute;
 }
 
 .ban-text-title {
@@ -96,10 +98,8 @@ $primary-color: #841844;
 	line-height: 90px;
 	letter-spacing: 0em;
 	text-align: left;
-	margin-top: 150px;
 	color: white;
 	height: 90px;
-	position: relative;
 }
 
 .ban-text-body {
@@ -115,18 +115,15 @@ $primary-color: #841844;
 	display: flex;
 }
 
-
 .news {
 	margin-left: 10vw;
 	margin-right: 10vw;
-	position: relative;
 	height: auto;
 }
 
 .news-title {
 	width: 100%;
 	height: 90px;
-	margin-top: 200px;
 	font-family: $font-stack;
 	font-size: 64px;
 	font-weight: 600;
@@ -165,6 +162,7 @@ $primary-color: #841844;
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 20px;
+    font-family: $font-stack;
 }
 
 .card-date-text {
@@ -326,9 +324,10 @@ $primary-color: #841844;
 
 .long-line {
 	width: 100%;
-	margin-top: 106px;
+	margin-top: 5vh;
 	left: -35px;
 	border: 1px solid;
+	border-color: rgba(108, 110, 123, 1);
 }
 
 .content {
@@ -366,6 +365,8 @@ $primary-color: #841844;
 	line-height: 90px;
 	letter-spacing: 0em;
 	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .image {
@@ -609,7 +610,7 @@ $primary-color: #841844;
 }
 
 .swiper-container {
-	weight: 100%;
+	width: 100%;
 	height: 100%;
 
 	.swiper-slide {
@@ -731,6 +732,9 @@ $primary-color: #841844;
 	img {
 		max-width: 100%;
 	}
+	.news-title {
+		font-size: 48px;
+	}
 	.paginator {
 		justify-content: center;
 	}
@@ -745,6 +749,11 @@ $primary-color: #841844;
 		height: 40px;
 	}
 	.circle-arrow {
+		width: 50px;
+		height: 40px;
+		padding: 0px;
+	}
+	.circle-arrow:hover {
 		width: 50px;
 		height: 40px;
 		padding: 0px;

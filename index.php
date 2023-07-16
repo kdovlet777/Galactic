@@ -17,33 +17,19 @@
 	
 	$st = $news::getList($start, $amount);
 	
-	$bt = $news::getList($start, $amount);
-
+	$bt = $news::getLast();
 	include("header.php");
 		?>
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<!-- <div class="banner"> -->
-				<?php while($ban = $bt->fetch()){?>
-				<div class="swiper-slide" style="background: url(assets/img/images/<?=$ban['image'] ?>) no-repeat center center fixed; background-size: cover; ">
-					<div class="ban-text">
-						<div class="ban-text-title"><?=$ban['title']?></div>
-						<div class="ban-text-body"><?=$ban['announce']?></div>
-					</div>
-				</div>
-				<?php } ?>
-				<!-- </div> -->
+		<div class="banner">
+			
+			<img class="ban-image" src="assets/img/images/<?=$bt['image']?>">
+			
+			<div class="ban-text">
+				<div class="ban-text-title"><?=$bt['title']?></div>
+				<div class="ban-text-body"><?=$bt['announce']?></div>
 			</div>
-			     <div class="swiper-pagination"></div>
-
-			  <!-- If we need navigation buttons -->
-			  <div class="swiper-button-prev"></div>
-			  <div class="swiper-button-next"></div>
-
-		
 		</div>
 		<div class="news">
-
 			<div class="news-title">
 				<p>Новости</p>
 			</div>
