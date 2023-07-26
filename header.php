@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
-	<title></title>
+	<link rel="icon" type="image/x-icon" href="assets/img/Vector.png">
+	<title><?=$code?></title>
 	<script src="https://kit.fontawesome.com/34525fb119.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
