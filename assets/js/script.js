@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			    el: '.swiper-scrollbar',
 			  },
 			});
-	const btn = document.querySelector(".sendbutton");
+	// const btn = document.querySelector(".sendbutton");
 	const msg = document.querySelector(".message");
 	const name = document.querySelector("#name");
 	const email = document.querySelector("#email");

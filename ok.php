@@ -61,13 +61,13 @@ $str = '<div class="banner">
 				</div>';
 preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
 
-echo "<textarea style='height:480px; width:720px;'>";
+// echo "<textarea style='height:480px; width:720px;'>";
 
-foreach ($matches as $key => $value) {
-	echo "---$key---\n";
-	foreach($value as $jey => $jalue){
-		echo "$jey - $jalue \n";
-	}
-}
-echo "</textarea>";
+// foreach ($matches as $key => $value) {
+// 	echo "---$key---\n";
+// 	foreach($value as $jey => $jalue){
+// 		echo "$jey - $jalue \n";
+// 	}
+// }
+// echo "</textarea>";
 ?>

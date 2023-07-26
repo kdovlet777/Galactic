@@ -55,7 +55,7 @@
 					$pagin = (isset($_GET['pageID']) ? $_GET['pageID'] : 1);
 					if ($pagin != 1){
 				 ?>
-
+				 	<a class="btn" href="/index.php?pageID=1"><div class="circle-arrow"><i class="fa-solid fa-arrow-left"></i></div></a>
 					<a href="/index.php?pageID=<?=($pagin-1)?>" class="btn"><div class="circle"><?=$pagin - 1 ?></div></a>
 					<?php } ?>
 					<div class="circle-active"><?=$pagin ?></div>

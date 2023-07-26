@@ -782,4 +782,7 @@ body {
   .sendbutton {
     width: 100%;
   }
+  .sendbutton:hover {
+    width: 100%;
+  }
 }
