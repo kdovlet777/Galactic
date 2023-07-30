@@ -4,7 +4,7 @@
 	use MySpace\DB;
 	use PDO;
 
-	class NewsModel{
+	class NewsModel {
 		public static function getCount(){
 			$sql = 'select count(*) from news ;';
 			$st = DB::connection()->query($sql);

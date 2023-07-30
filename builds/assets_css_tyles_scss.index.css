@@ -647,6 +647,88 @@ body {
   display: flex;
 }
 
+.comment {
+  font-family: Open Sans;
+  height: auto;
+}
+.comment .ctitle {
+  font-size: 28px;
+}
+
+.cname {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.ccard {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.cdate {
+  font-size: 20px;
+  color: rgb(144, 144, 144);
+}
+
+.cbody {
+  font-size: 22px;
+}
+
+.form {
+  font-family: Open Sans;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.ftitle {
+  font-size: 28px;
+}
+
+.finput {
+  padding: 7px;
+  border: 1px solid #841844;
+  border-radius: 7px;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.fbutton {
+  margin-top: 20px;
+  font-size: 22px;
+  height: auto;
+  font-family: Open Sans;
+  color: #841844;
+  border: 1px solid;
+  border-color: #841844;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.fbutton:hover {
+  margin-top: 20px;
+  font-size: 22px;
+  height: auto;
+  font-family: Open Sans;
+  background-color: #841844;
+  color: white;
+  border: 1px solid;
+  border-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.4s;
+}
+
 @media screen and (width < 1200px) {
   .navbar {
     flex-direction: column;
@@ -674,6 +756,9 @@ body {
   .non-image {
     width: 100%;
     height: auto;
+  }
+  .form {
+    width: 100%;
   }
 }
 @media screen and (width < 500px) {
@@ -783,6 +868,15 @@ body {
     width: 100%;
   }
   .sendbutton:hover {
+    width: 100%;
+  }
+  .cname {
+    font-size: 22px;
+  }
+  .ccard {
+    padding-left: 0px;
+  }
+  .form {
     width: 100%;
   }
 }
