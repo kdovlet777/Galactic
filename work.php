@@ -16,7 +16,7 @@
 ?>
 	<div class="long-line"></div>
 	<div class="content">
-		<div class="path">Главная  /  <p class="grey"><?=$row['title']?></p></div>
+		<div class="path"> <a class="btn" href="/index.php?pageID=<?=$_SESSION['pageID']?>">Главная </a>  /  <p class="grey"><?=$row['title']?></p></div>
 		<div class="title">
 			<?=$row['title'] ?>
 		</div>
