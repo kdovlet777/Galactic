@@ -6,7 +6,7 @@
 		],
 		"Contacts" => [
 			"title" => "Контакты",
-			"url" => "/contacts.php"
+			"url" => "/Contacts.php"
 		],
 	]
 ?>
