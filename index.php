@@ -1,29 +1,21 @@
-<?php 
+<?php
 
-function modelLoader($category, $class) {
-	include 'app/models/' . $category . '/' . $class . '.php';
+$url = $_SERVER['REQUEST_URI']; 
+
+if (preg_match("/^\/$/", $url)){
+	$code = "main";
+	include 'views/index.php';
+
+} elseif (preg_match("/^\/news\/$/", $url)){
+	include 'news.php';
+
+} elseif (preg_match("/^\/news\/[0-9]+\/$/", $url)) {
+	preg_match("/[0-9]+/", $url, $id);
+	$id = $id[0];
+	include 'detail.php';
+
+} elseif (preg_match("/^\/news\/page-[0-9]+\/$/", $url)) {
+	preg_match("/[0-9]+/", $url, $pageID);
+	$pageID = $pageID[0];
+	include 'news.php';
 }
-
-spl_autoload_register('modelLoader');
-
-modelLoader('News', 'NewsModel');
-
-session_start();
-$code="News";
-use MySpace\NewsModel;
-$news = new NewsModel; 
-
-$start = 0;
-$amount = 4;
-
-if (isset($_GET['pageID'])){
-	$start += 4*($_GET['pageID']-1);
-	$_SESSION['pageID'] = $_GET['pageID'];
-} else {
-	$_SESSION['pageID'] = 1;
-}
-
-$st = $news::getList($start, $amount);
-$bt = $news::getLast();
-
-include 'app/views/News/List.php';

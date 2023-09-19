@@ -1,14 +1,16 @@
 <?php
 
-namespace MySpace;
+namespace App\Models;
 
 require_once('app/DB.php');
 
-use MySpace\DB;
+use App\DB;
 use PDO;
 
-class NewsModel {
-    public static function getCount() {
+class NewsModel 
+{
+    public static function getCount()
+    {
         $query = 'SELECT COUNT(*) FROM news;';
         $queryConnect = DB::connection()->query($query);
         $queryConnect->execute();
@@ -16,7 +18,8 @@ class NewsModel {
         return $result[0];
     }
 
-    public static function getList($start, $limit) {
+    public static function getList($start, $limit)
+    {
         $query = 'SELECT *, DATE_FORMAT(date, "%d.%m.%Y") AS dt FROM news ORDER BY date DESC LIMIT :start, :limit;';
         $queryConnect = DB::connection()->prepare($query);
         $queryConnect->bindValue(":start", $start, PDO::PARAM_INT);
@@ -25,7 +28,8 @@ class NewsModel {
         return $queryConnect;
     }
 
-    public static function getItem($id) {
+    public static function getItem($id)
+    {
         $query = 'SELECT *, DATE_FORMAT(date, "%d.%m.%Y") AS dt FROM news WHERE id = :id ;';
         $queryConnect = DB::connection()->prepare($query);
         $queryConnect->bindValue(":id", $id, PDO::PARAM_INT);
@@ -34,7 +38,8 @@ class NewsModel {
         return $result;
     }
 
-    public static function getLast() {
+    public static function getLast()
+    {
         $query = 'SELECT * FROM news ORDER BY date DESC LIMIT 1;';
         $queryConnect = DB::connection()->query($query);
         $queryConnect->execute();

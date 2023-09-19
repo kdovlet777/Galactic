@@ -1,4 +1,4 @@
-<?= include 'app/views/Header.php'; ?>
+<?php include 'views/Header.php'; ?>
 <div class="long-line"></div>
 	<div class="content">
 		<div class="path">Главная  /  <p class="grey"><?=$row['title']?></p></div>
@@ -12,15 +12,15 @@
 				<div class="content-text">
 					<?=$row['content']?>
 				</div>
-				<a class="btn" href="/index.php?pageID=<?=$_SESSION['pageID']?>"> <button class="card-button-detail"><i class="fa-solid fa-arrow-left-long fa-2xl"></i><p class="card-button-text-detail"> НАЗАД К НОВОСТЯМ </p> </button> </a>
+				<a class="btn" href="/news/page-<?=$_SESSION['pageID']?>/"> <button class="card-button-detail"><i class="fa-solid fa-arrow-left-long fa-2xl"></i><p class="card-button-text-detail"> НАЗАД К НОВОСТЯМ </p> </button> </a>
 			</div>
 			<div class="image"> 
-				<img src="assets/img/images/<?=$row['image']?>">
+				<img src="/assets/img/images/<?=$row['image']?>">
 			</div>
 
 		</div>
 		
-		<?php include('app/views/Footer.php'); ?>
+		<?php include('views/Footer.php'); ?>
 	</div>
 </div>
 </body>

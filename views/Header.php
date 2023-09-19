@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="assets/img/Vector.png">
+	<link rel="icon" type="image/x-icon" href="/assets/img/Vector.png">
 	<title><?=$code?></title>
 	<script src="https://kit.fontawesome.com/34525fb119.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<script src="builds/assets_css_tyles_scss.index.js"></script>
-<link rel="stylesheet" href="builds/assets_css_tyles_scss.index.css">
+<script src="/builds/assets_css_tyles_scss.index.js"></script>
+<link rel="stylesheet" href="/builds/assets_css_tyles_scss.index.css">
 
 <link
   rel="stylesheet"
@@ -25,7 +25,7 @@
 	<div class="container">
 	<nav class="navbar">
 		<div class="logo">
-			<img src="assets/img/Vector.png">
+			<img src="/assets/img/Vector.png">
 			<p class="navbar-text">ГАЛАКТИЧЕСКИЙ<br>ВЕСТНИК</p>
 		</div>
 		
@@ -47,7 +47,6 @@
 						<a class="btn" href="<?=$value["url"]?>">
 							<?=$pageName ?>
 							</a>
-
 							</div>
 					<?php }
 				} ?>

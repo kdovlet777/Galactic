@@ -1,6 +1,6 @@
 <?php 
 	$code="Contacts";
-	include 'app/views/Menu/Contacts.php';
+	include 'views/Menu/Contacts.php';
 
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['question']) 
 	&& $_POST['name'] != '' && $_POST['email'] != '' && $_POST['question'] != '' 

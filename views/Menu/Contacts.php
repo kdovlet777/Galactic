@@ -1,5 +1,5 @@
 <?php 
- include('app/views/Header.php');?>
+ include('views/Header.php');?>
  
 <div class="container_ok">
 	<div>
@@ -13,7 +13,7 @@
 		<div class="qquest"><label class="label" >Вопрос:</label><label class="label" id="labelText"></label> <textarea placeholder="В чем сила, брат?" id="question" class="inputtext" name="question" ></textarea></div>
 		<button type="submit" class="sendbutton">Отправить</button>
 	</form>
-	<?php include('app/views/Footer.php');?>
+	<?php include('views/Footer.php');?>
 </div>
 </body>
 

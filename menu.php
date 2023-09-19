@@ -2,11 +2,10 @@
 	$arr = [
 		"News" => [
 			"title" => "Новости",
-			"url" => "/index.php"
+			"url" => "/news/"
 		],
 		"Contacts" => [
 			"title" => "Контакты",
-			"url" => "/Contacts.php"
+			"url" => "/contacts/"
 		],
-	]
-?>
+	];
