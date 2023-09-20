@@ -648,7 +648,7 @@ body {
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   margin-left: 10vw;
   margin-right: 10vw;
   bottom: 0;

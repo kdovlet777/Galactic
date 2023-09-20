@@ -3,10 +3,11 @@
 namespace App\Controllers;
 
 use App\Models\NewsModel;
+use App\Controllers\BaseController;
 
-class NewsController
+class NewsController extends BaseController
 {
-	public static function actionList($pageID)
+	public function actionList($pageID)
 	{
 		session_start();
 		$code = "News";
@@ -25,24 +26,27 @@ class NewsController
 		$st = $news::getList($start, $amount);
 		$bt = $news::getLast();
 
-		ob_start();
-		include 'views/News/List.php';
-		$content = ob_get_contents();
-		ob_end_clean();
-		include 'views/Layout.php';
+		$this->render('views/News/List.php', array (
+			'code'=>$code, 
+			'news'=>$news, 
+			'start'=>$start,
+			'amount'=>$amount,
+			'st'=>$st,
+			'bt'=>$bt
+		));
 	}
 
-	public static function actionDetail($id)
+	public function actionDetail($id)
 	{
 		session_start();
 		$newsModel = new NewsModel;
 		$row = $newsModel->getItem($id);
 		$code = "News";
 
-		ob_start();
-		include 'views/News/Detail.php';
-		$content = ob_get_contents();
-		ob_end_clean();
-		include 'views/Layout.php';
+		$this->render('views/News/Detail.php', array (
+			'newsModel'=>$newsModel,
+			'row'=>$row,
+			'code'=>$code,
+		));
 	}
 }
