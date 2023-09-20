@@ -1,4 +1,4 @@
-<?php include 'views/Header.php'; ?>
+
 <div class="long-line"></div>
 	<div class="content">
 		<div class="path">Главная  /  <p class="grey"><?=$row['title']?></p></div>
@@ -20,8 +20,5 @@
 
 		</div>
 		
-		<?php include('views/Footer.php'); ?>
+		
 	</div>
-</div>
-</body>
-</html>

@@ -1,4 +1,4 @@
-<?php include 'views/Header.php' ?>
+<?php $code = "main"; include 'views/Header.php'; ?>
 
 <div class="content">
 	<div class="long-line"></div>

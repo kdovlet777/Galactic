@@ -28,12 +28,7 @@
 			<img src="/assets/img/Vector.png">
 			<p class="navbar-text">ГАЛАКТИЧЕСКИЙ<br>ВЕСТНИК</p>
 		</div>
-		
-		<?php 
-		
-		include("menu.php");
-		?>
-
+		<?php include("menu.php");?>
 		<div class="head">
 			<?php 
 				foreach ($arr as $key => $value) {
@@ -52,3 +47,15 @@
 				} ?>
 		</div>
 	</nav>
+
+	<?=$content ?>
+
+	<div class="footer" style="position: relative;">
+	<div class="line"></div>
+			<div class="copyright">
+				© 2023 — 2412 «Галактический вестник»
+			</div>
+		</div>	
+	</div>
+<body>
+<html>

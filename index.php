@@ -1,21 +1,28 @@
 <?php
 
+include 'autoload.php';
+
+use App\Controllers\NewsController;
+
 $url = $_SERVER['REQUEST_URI']; 
 
-if (preg_match("/^\/$/", $url)){
-	$code = "main";
-	include 'views/index.php';
+$controller = false;
 
-} elseif (preg_match("/^\/news\/$/", $url)){
-	include 'news.php';
-
-} elseif (preg_match("/^\/news\/[0-9]+\/$/", $url)) {
-	preg_match("/[0-9]+/", $url, $id);
-	$id = $id[0];
-	include 'detail.php';
-
-} elseif (preg_match("/^\/news\/page-[0-9]+\/$/", $url)) {
-	preg_match("/[0-9]+/", $url, $pageID);
-	$pageID = $pageID[0];
-	include 'news.php';
+if ($url == "/") {
+	include 'views/main.php';
+} elseif ($url == "/news/") {
+	$controller = new NewsController;
+	$methodName = 'actionList';
+	$arg = [1];
+} elseif (preg_match("{^/news/(\d+)/$}", $url, $id)) {
+	$controller = new NewsController;
+	$methodName = "actionDetail";
+	$arg = [$id[1]];
+} elseif (preg_match("{^/news/page-(\d+)/$}", $url, $pageID)) {
+	$controller = new NewsController;
+	$methodName = "actionList";
+	$arg = [$pageID[1]];
+} 
+if ($controller) {
+	call_user_func_array([$controller, $methodName], $arg);
 }

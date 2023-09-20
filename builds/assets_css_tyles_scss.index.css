@@ -649,7 +649,8 @@ body {
 
 .footer {
   position: fixed;
-  width: 80%;
+  margin-left: 10vw;
+  margin-right: 10vw;
   bottom: 0;
 }
 
@@ -682,7 +683,7 @@ body {
     height: auto;
   }
 }
-@media screen and (width < 500px) {
+@media screen and (width < 600px) {
   .card {
     width: 100%;
   }
