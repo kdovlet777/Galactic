@@ -8,8 +8,8 @@ use App\Routers\ServiceRouter;
 $url = $_SERVER['REQUEST_URI']; 
 
 $routes = [
-	'news'=>NewsRouter::class,
-	'service'=>ServiceRouter::class
+	'news' => NewsRouter::class,
+	'service' => ServiceRouter::class
 ];
 
 foreach ($routes as $key => $value) {

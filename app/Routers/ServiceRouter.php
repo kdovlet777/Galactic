@@ -2,8 +2,8 @@
 
 namespace App\Routers;
 
+use App\Controllers\BaseController;
 use App\Controllers\GreetingController;
-use App\Controllers\NotFoundController;
 
 class ServiceRouter 
 {
@@ -11,18 +11,18 @@ class ServiceRouter
 	{
 		if ($url == "/") {
 			$controller = new GreetingController;
-			$action = "greeting";
+			$action = "actionGreeting";
 			$args = ["greeting"];
 		} else {
-			$controller = new NotFoundController;
+			$controller = new BaseController;
 			$action = "notFound";
 			$args = ["NotFound"];
 		}
 		if ($controller) {
 			return array(
-				"controller"=>$controller,
-				"action"=>$action,
-				"args"=>$args
+				"controller" => $controller,
+				"action" => $action,
+				"args" => $args
 			);
 		} return false;
 	}

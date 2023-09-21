@@ -29,7 +29,7 @@
 		<?php 
 			$pagesTotalNum = $news::getCount();
 			$pageDivs = intdiv($pagesTotalNum, $amount) + 1;
-
+			
 			$pagin = (isset($pageID) ? $pageID : 1);
 			if ($pagin != 1 ){
 		 ?>

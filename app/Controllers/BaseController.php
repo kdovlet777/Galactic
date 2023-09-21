@@ -13,4 +13,9 @@ class BaseController
 		ob_end_clean();
 		include 'views/Layout.php';
 	}
+
+	public function notFound($args)
+	{
+		$this->render('views/NotFound.php', array("code" => $args));	
+	}
 }

@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-require_once('app/DB.php');
-
 use App\DB;
 use PDO;
 

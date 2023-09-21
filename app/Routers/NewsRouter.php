@@ -24,9 +24,9 @@ class NewsRouter
 		} 
 		if ($controller) {
 			return array(
-				"controller"=>$controller,
-				"action"=>$methodName,
-				"args"=>$args
+				"controller" => $controller,
+				"action" => $methodName,
+				"args" => $args
 			);
 		} else return false;
 	}

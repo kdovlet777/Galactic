@@ -17,36 +17,44 @@ class NewsController extends BaseController
 		$amount = 4;
 
 		if (isset($pageID)) {
-			$start += 4*($pageID - 1);
+			$start += 4 * ($pageID - 1);
 			$_SESSION['pageID'] = $pageID;
 		} else {
 			$_SESSION['pageID'] = 1;
 		}
 
+		$total = $news::getCount();
 		$st = $news::getList($start, $amount);
 		$bt = $news::getLast();
 
-		$this->render('views/News/List.php', array (
-			'code'=>$code, 
-			'news'=>$news, 
-			'start'=>$start,
-			'amount'=>$amount,
-			'st'=>$st,
-			'bt'=>$bt
-		));
+		if (($total / 4 + 1) > $pageID) {
+			$this->render('views/News/List.php', array (
+				'code' => $code, 
+				'news' => $news, 
+				'start' => $start,
+				'amount' => $amount,
+				'st' => $st,
+				'bt' => $bt,
+				'pageID' => $pageID,
+			));
+		} else {
+			$this->notFound('Not Found');
+		}
 	}
 
 	public function actionDetail($id)
 	{
 		session_start();
 		$newsModel = new NewsModel;
-		$row = $newsModel->getItem($id);
 		$code = "News";
+		if ($row = $newsModel->getItem($id)) {
+			return $this->render('views/News/Detail.php', array (
+				'newsModel' => $newsModel,
+				'row' => $row,
+				'code' => $code,
+			));	
+		} 
 
-		$this->render('views/News/Detail.php', array (
-			'newsModel'=>$newsModel,
-			'row'=>$row,
-			'code'=>$code,
-		));
+		return $this->notFound('Not Found');
 	}
 }

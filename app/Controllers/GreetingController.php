@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 class GreetingController extends BaseController
 {
-	public function greeting($args)
+	public function actionGreeting($args) 
 	{
-		$this->render('views/greeting.php', array("code"=>$args));
+		$this->render('views/Greeting.php', array("code" => $args));
 	}
 }
