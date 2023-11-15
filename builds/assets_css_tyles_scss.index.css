@@ -179,7 +179,7 @@ body {
 
 .card-title {
   width: 100%;
-  height: auto;
+  height: 135px;
   font-family: Open Sans;
   font-size: 32px;
   font-weight: 600;
@@ -765,8 +765,7 @@ body {
     line-height: 9vw;
   }
   .content-text {
-    font-size: 15px;
-    line-height: 9vw;
+    font-size: 18px;
   }
   .content-box {
     flex-direction: column-reverse;

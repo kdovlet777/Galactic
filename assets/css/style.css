@@ -80,6 +80,7 @@ body {
 	z-index: -1;
 	position: absolute;
 	display: block;
+	filter: brightness(70%);
 }
 
 .ban-text {
@@ -179,7 +180,7 @@ body {
 
 .card-title {
 	width: 100%;
-	height: auto;
+	height: 135px;
 	font-family: Open Sans;
 	font-size: 32px;
 	font-weight: 600;
