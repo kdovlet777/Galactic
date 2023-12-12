@@ -38,7 +38,7 @@ body {
 	padding: 8px;
 	border-radius: 5px;
 	border: 2px solid;
-	border-color: #841844;
+	border-color: #D0F162;
 	gap: 10px;
 	background-color: white;
 	display: flex;
@@ -54,7 +54,7 @@ body {
 	padding: 8px;
 	border-radius: 5px;
 	border: 2px solid;
-	border-color: #841844;
+	border-color: #D0F162;
 	gap: 10px;
 	color: white;
 	background-color: #841844;
@@ -209,7 +209,7 @@ body {
 	padding: 16px 41px 16px 41px;
 	border-radius: 50px;
 	border: 2px solid;
-	border-color: #9B407A;
+	border-color: #D0F162;
 	gap: 10px;
 	display: flex;
 	align-items: center;

@@ -57,4 +57,9 @@ class NewsController extends BaseController
 
 		return $this->notFound('Not Found');
 	}
+
+	public function actionAbout()
+	{
+		$this->render('views/News/About.php', ['code' => 'About']);
+	}
 }

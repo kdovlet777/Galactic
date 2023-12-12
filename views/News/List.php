@@ -1,25 +1,30 @@
 <div class="banner">
 	
-	<img class="ban-image" src="/assets/img/images/<?=$bt['image']?>">
+	<img class="ban-image" src="/assets/imgs/<?=$bt['image']?>">
 	
 	<div class="ban-text">
+	<a href="/news/<?=$bt['id']?>/" style="text-decoration: none;">
 		<div class="ban-text-title"><?=$bt['title']?></div>
 		<div class="ban-text-body"><?=$bt['announce']?></div>
+		</a>
 	</div>
 </div>
 <div class="news">
 	<div class="news-title">
-		<p>Новости</p>
+		Рецепты
 	</div>
 	<div class="blocks">
 		<?php while($row = $st -> fetch()) { ?>
 		<div class="card">
+		<div class="card-thumb" style="background: url('/assets/imgs/<?=$row['image']?>'); background-size: cover;"></div>
+			<div class="card-content">
 			<div class="card-date"><p class="card-date-text"> 
 				<?=$row['dt']?>
 			</p></div>
 			<div class="card-title"><?=$row['title']?></div>
 			<div class="card-text"><?=$row['announce']?></div>
 			<a class="btn" href="/news/<?=$row['id']?>/"><button class="card-button"><p class="card-button-text"> ПОДРОБНЕЕ </p> <i class="fa-solid fa-arrow-right-long fa-2xl"></i></button></a>
+			</div>
 		</div>
 		<?php 
 		}

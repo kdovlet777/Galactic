@@ -10,8 +10,8 @@ body {
   height: auto;
   margin-top: 40px;
   margin-left: 10vw;
+  margin-right: 10vw;
   display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -22,12 +22,13 @@ body {
 
 .navbar-text {
   width: 273px;
-  font-size: 28px;
+  font-size: 29px;
   font-family: Segoe UI;
   margin-left: 25px;
 }
 
 .head {
+  justify-content: flex-end;
   display: flex;
   width: 50%;
   height: auto;
@@ -36,14 +37,16 @@ body {
 }
 
 .rectangle {
+  text-wrap: nowrap;
+  border-radius: 10px;
   width: auto;
   height: 54px;
   padding: 8px;
-  border-radius: 5px;
   border: 2px solid;
-  border-color: #841844;
+  border-color: #9eb849;
   gap: 10px;
   background-color: white;
+  color: #9eb849;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,15 +55,15 @@ body {
 }
 
 .rectangle-active {
+  text-wrap: nowrap;
+  border-radius: 10px;
   width: auto;
   height: 54px;
   padding: 8px;
-  border-radius: 5px;
-  border: 2px solid;
-  border-color: #841844;
+  border: 2px solid #9eb849;
   gap: 10px;
   color: white;
-  background-color: #841844;
+  background-color: #9eb849;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +73,7 @@ body {
 
 .banner {
   margin-top: 40px;
-  height: 65vh;
+  height: 55vh;
   width: 100%;
   margin-left: 0px;
   position: relative;
@@ -94,9 +97,9 @@ body {
 
 .ban-text-title {
   font-family: Open Sans;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 600;
-  line-height: 90px;
+  line-height: 50px;
   letter-spacing: 0em;
   text-align: left;
   color: white;
@@ -107,9 +110,9 @@ body {
   width: auto;
   height: 51px;
   font-family: Open Sans;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 400;
-  line-height: 51px;
+  line-height: 40px;
   letter-spacing: 0em;
   text-align: left;
   color: white;
@@ -124,13 +127,14 @@ body {
 
 .news-title {
   width: 100%;
-  height: 90px;
+  height: fit-content;
   font-family: Open Sans;
   font-size: 64px;
   font-weight: 600;
   line-height: 90px;
   letter-spacing: 0em;
   text-align: left;
+  margin: 40px 0;
 }
 
 .blocks {
@@ -140,22 +144,38 @@ body {
   margin-bottom: 98px;
   flex-wrap: wrap;
   height: auto;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
-  width: 48%;
+  width: 100%;
   height: auto;
-  gap: 30px;
   display: flex;
-  margin-bottom: 40px;
+  gap: 25px;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+
+.card-thumb {
+  width: 30%;
+  border-radius: 15px;
+  background-color: green;
+  object-fit: cover;
+}
+
+.card-content {
+  width: 70%;
+  display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .card-date {
   width: 118px;
   height: 34px;
   padding: 6px 18px 6px 18px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: #ECF2F5;
   display: flex;
   align-items: center;
@@ -179,7 +199,7 @@ body {
 
 .card-title {
   width: 100%;
-  height: 135px;
+  height: 70px;
   font-family: Open Sans;
   font-size: 32px;
   font-weight: 600;
@@ -187,7 +207,6 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: #841844;
-  margin-bottom: 20px;
 }
 
 .card-text {
@@ -206,9 +225,11 @@ body {
   width: 216px;
   height: 54px;
   padding: 16px 41px 16px 41px;
-  border-radius: 50px;
+  background-color: white;
+  border-radius: 20px;
   border: 2px solid;
-  border-color: #9B407A;
+  border-color: #9eb849;
+  color: #9eb849;
   gap: 10px;
   display: flex;
   align-items: center;
@@ -225,7 +246,8 @@ body {
 
 .card-button:hover {
   color: white;
-  background-color: #841844;
+  cursor: pointer;
+  background-color: #9eb849;
   transition: all 0.4s;
 }
 
@@ -242,7 +264,8 @@ body {
   padding: 8px;
   border-radius: 50px;
   border: 2px solid;
-  border-color: #841844;
+  color: #9eb849;
+  border-color: #9eb849;
   gap: 10px;
   background-color: white;
   display: flex;
@@ -258,10 +281,10 @@ body {
   padding: 8px;
   border-radius: 50px;
   border: 2px solid;
-  border-color: #841844;
+  border-color: #9eb849;
   gap: 10px;
   color: white;
-  background-color: #841844;
+  background-color: #9eb849;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,7 +298,8 @@ body {
   padding: 8px 26px 8px 26px;
   border-radius: 50px;
   border: 2px solid;
-  border-color: #841844;
+  border-color: #9eb849;
+  color: #9eb849;
   gap: 10px;
   display: flex;
   align-items: center;
@@ -289,9 +313,9 @@ body {
   padding: 8px 26px 8px 26px;
   border-radius: 50px;
   border: 2px solid;
-  border-color: #841844;
+  border-color: #9eb849;
   color: white;
-  background-color: #841844;
+  background-color: #bbd957;
   gap: 10px;
   display: flex;
   align-items: center;
@@ -366,12 +390,13 @@ body {
 }
 
 .image {
-  width: 48%;
+  width: 70%;
   height: auto;
+  border-radius: 20px;
 }
 
 .non-image {
-  width: 48%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -380,13 +405,17 @@ body {
   display: flex;
   width: 100%;
   gap: 2vw;
+  flex-direction: column-reverse;
 }
 
 .container_ok {
   margin-left: 10vw;
   margin-right: 10vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  height: 500px;
 }
 
 .content-htext {
@@ -410,6 +439,7 @@ body {
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
+  margin: 15px 0px;
 }
 
 .card-button-detail {
@@ -417,12 +447,15 @@ body {
   width: 286px;
   height: 54px;
   padding: 16px 41px 16px 41px;
-  border-radius: 50px;
+  border-radius: 20px;
+  background-color: white;
   border: 2px solid;
-  border-color: #9B407A;
+  border-color: #9eb849;
+  color: #9eb849;
   gap: 10px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .card-button-detail:hover {
@@ -430,11 +463,11 @@ body {
   width: 286px;
   height: 54px;
   padding: 16px 41px 16px 41px;
-  border-radius: 50px;
+  border-radius: 20px;
   border: 2px solid;
-  border-color: #9B407A;
+  border-color: #9eb849;
   color: white;
-  background-color: #841844;
+  background-color: #9eb849;
   gap: 10px;
   display: flex;
   align-items: center;
@@ -478,7 +511,7 @@ body {
   -webkit-text-decoration: none;
   -webkit-color: #841844;
   color: #841844;
-  width: auto;
+  width: fit-content;
 }
 
 .container {
@@ -653,6 +686,34 @@ body {
   bottom: 0;
 }
 
+.side1 {
+  background: url('/assets/imgs/4965a5624b0830f4770c1e3dc8465e20.jpeg');
+  border: 5px solid #9eb849;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  width: 25%;
+  height: 100%;
+}
+
+.about-content {
+  font-size: 24px;
+  font-family: "Open Sans";
+  width: 49%;
+  text-align: center;
+  height: 100%;
+}
+
+.side2 {
+  background: url('/assets/imgs/shutterstock_300931715_1647943943-e1647943984340.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #9eb849;
+  border-radius: 20px;
+  width: 25%;
+  height: 100%;
+}
+
 @media screen and (width < 1200px) {
   .navbar {
     flex-direction: column;
@@ -685,6 +746,30 @@ body {
 @media screen and (width < 600px) {
   .card {
     width: 100%;
+    flex-direction: column;
+  }
+  .container_ok {
+    height: auto;
+    flex-direction: column;
+  }
+  .side1 {
+  	width: 100%;
+	height: 200px;
+  }
+  .side2 {
+  	width: 100%;
+	height: 200px;
+  }
+  .about-content {
+	  font-size: 18px;
+  	width: 100%;
+  }
+  .card-thumb {
+    height: 200px;
+    width: 100%;
+  }
+  .card-content {
+    width: 100%;
   }
   .blocks {
     display: flex;
@@ -695,37 +780,44 @@ body {
     align-items: flex-start;
   }
   .navbar {
+    margin-left: 0;
     flex-direction: column;
     align-items: center;
   }
   .navbar-text {
-    font-size: 16px;
+    font-size: 26px;
   }
   .logo {
     justify-content: center;
   }
   .head {
+    width: 100%;
     margin-top: 10px;
     justify-content: center;
   }
   .rectangle {
     font-size: 15px;
     height: 24px;
+    width: 76px;
   }
   .rectangle-active {
     font-size: 15px;
+    width: 76px;
     height: 24px;
   }
   .ban-text-title {
-    font-size: 32px;
-    line-height: 9vw;
+    font-size: 24px;
+    line-height: 4vh;
+    margin-bottom: 25px;
   }
   .ban-text-body {
-    font-size: 24px;
-    line-height: 9vw;
+    font-size: 18px;
+    line-height: 3vh;
   }
+  .content {
   img {
     max-width: 100%;
+  }
   }
   .news-title {
     font-size: 48px;
@@ -752,6 +844,14 @@ body {
     width: 50px;
     height: 40px;
     padding: 0px;
+  }
+  .card-title {
+  	font-size: 22px;
+	line-height: 3vh;
+  }
+  .card-text {
+	font-size: 18px;
+	line-height: 3vh;
   }
   .path {
     font-size: 10px;
@@ -789,6 +889,15 @@ body {
   }
   .sendbutton:hover {
     width: 100%;
+  }
+  .card-button {
+  	width: 100%;
+	justify-content: center;
+  }
+  .card-content {
+  .btn {
+  	width: 100%;
+  }
   }
 }
 

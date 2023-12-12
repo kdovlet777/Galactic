@@ -13,6 +13,10 @@ class NewsRouter
 			$controller = new NewsController;
 			$methodName = 'actionList';
 			$args = [1];
+		} elseif ($url == "/about/") {
+                        $controller = new NewsController;
+                        $methodName = 'actionAbout';
+                        $args = [1];
 		} elseif (preg_match("{^/news/(\d+)/$}", $url, $id)) {
 			$controller = new NewsController;
 			$methodName = "actionDetail";
